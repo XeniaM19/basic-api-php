@@ -2,7 +2,7 @@
   class BaseController
   {
     /**
-     * Get query string parameters from the URL.
+     * Get query string parameters from URL of the request.
      * 
      * @return array
      */
@@ -13,7 +13,7 @@
     }
 
     /**
-     * Get query string parameters from the URL.
+     * Get body from the request.
      * 
      * @return array
      */
@@ -31,6 +31,8 @@
     protected function sendOutput($data, $httpHeaders=array())
     {
       header_remove('Set-Cookie');
+      header("Access-Control-Allow-Origin: *");
+      header("Access-Control-Allow-Headers: *");
 
       // Add each headers.
       if (is_array($httpHeaders) && count($httpHeaders)) {

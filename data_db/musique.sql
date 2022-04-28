@@ -87,7 +87,8 @@ INSERT INTO `artiste_musique` (`artiste_id`, `musique_id`) VALUES
 CREATE TABLE `musique` (
   `id` int(10) NOT NULL,
   `nom` varchar(64) NOT NULL,
-  `durée` time NOT NULL,
+  `duree` time NOT NULL,
+  `url` varchar(256) NOT NULL,
   `album` varchar(64) NOT NULL,
   `style_id` int(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -96,15 +97,15 @@ CREATE TABLE `musique` (
 -- Déchargement des données de la table `musique`
 --
 
-INSERT INTO `musique` (`id`, `nom`, `durée`, `album`, `style_id`) VALUES
-(1, 'Human After all', '05:19:00', 'Human After all', 3),
-(2, 'Mr. Brown', '04:13:00', 'Volume II One Love', 1),
-(3, 'Three Little Birds', '03:03:00', 'Exodus', 1),
-(4, 'Cry Baby', '03:59:00', 'Pearl', 4),
-(5, 'Lucifer Sam', '03:07:00', 'The Piper at the Gates of Dawn', 2),
-(6, 'Arnold Layne', '02:52:00', 'Relics', 2),
-(7, 'Space Oddity', '05:13:00', 'Space Oddity', 4),
-(8, 'Bohemian Rhapsody', '06:00:00', 'A Night at the Opera', 4);
+INSERT INTO `musique` (`id`, `nom`, `duree`, `url`, `album`, `style_id`) VALUES
+(1, 'Human After all', '05:19:00', 'https://www.youtube.com/watch?v=hrB-_nIer88', 'Human After all', 3),
+(2, 'Mr. Brown', '04:13:00', 'https://www.youtube.com/watch?v=525TscClHwo', 'Volume II One Love', 1),
+(3, 'Three Little Birds', '03:03:00', 'https://www.youtube.com/watch?v=HNBCVM4KbUM', 'Exodus', 1),
+(4, 'Cry Baby', '03:59:00', 'https://www.youtube.com/watch?v=_NT2SeSl5Ik', 'Pearl', 4),
+(5, 'Lucifer Sam', '03:07:00', 'https://www.youtube.com/watch?v=tLhepbmpsUI', 'The Piper at the Gates of Dawn', 2),
+(6, 'Arnold Layne', '02:52:00', 'https://www.youtube.com/watch?v=H3DGpINHX5Q', 'Relics', 2),
+(7, 'Space Oddity', '05:13:00', 'https://www.youtube.com/watch?v=iYYRH4apXDo', 'Space Oddity', 4),
+(8, 'Bohemian Rhapsody', '06:00:00', 'https://www.youtube.com/watch?v=fJ9rUzIMcZQ', 'A Night at the Opera', 4);
 
 -- --------------------------------------------------------
 

@@ -41,7 +41,7 @@
     }
 
     /**
-     * Return a single object from the database.
+     * Get a single object from the database.
      * 
      * @param string $query
      * @param string $className
