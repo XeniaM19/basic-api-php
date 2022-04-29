@@ -31,8 +31,11 @@
     protected function sendOutput($data, $httpHeaders=array())
     {
       header_remove('Set-Cookie');
+
+      // Allow origin, headers and methods to avoid CORS issues.
       header("Access-Control-Allow-Origin: *");
       header("Access-Control-Allow-Headers: *");
+      header("Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS");
 
       // Add each headers.
       if (is_array($httpHeaders) && count($httpHeaders)) {
