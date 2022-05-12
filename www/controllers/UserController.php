@@ -83,7 +83,7 @@
         // ---- TODO : Commenter ce bout de code ----
         $body = $this->getBody();
         if (!$body) {
-          throw new Exception("L'identifiant est incorrect ou n'a pas été spécifié");
+          throw new Exception("Aucune donnée n'a été transmise dans le formulaire");
         }
 
         // ---- TODO : Commenter ce bout de code ----
